@@ -2,7 +2,7 @@
 
 ## Metric Being Tested
 
-**Paid Conversion Rate** (`converted_to_paid`) — the proportion of signed-up users who become paying customers. This is the North Star metric for the experiment (see `outputs/recommendation_memo.md` for the full justification).
+**Paid Conversion Rate** (`converted_to_paid`) — the proportion of signed-up users who become paying customers. This is the North Star metric for the experiment .
 
 ## Reason for Choosing This Metric
 
@@ -40,8 +40,6 @@ We use a one-tailed test because the business question is directional: leadershi
 - **95% confidence interval for the difference (Treatment − Control):** [1.56pp, 6.15pp]
 - **Relative lift:** +120.9%
 
-Full evidence captured in `screenshots/hypothesis_test_output.png`.
-
 ## Decision Rule
 
 Reject H₀ if p-value < α (0.05); otherwise fail to reject H₀.
@@ -50,7 +48,7 @@ Reject H₀ if p-value < α (0.05); otherwise fail to reject H₀.
 
 Since p = 0.00055 is far below α = 0.05, we **reject the null hypothesis**. There is strong statistical evidence that the treatment group's paid conversion rate is genuinely higher than control's, and the 95% confidence interval (1.56pp to 6.15pp) does not cross zero, reinforcing that this is unlikely to be due to random chance. The effect size is also large in practical terms — conversion more than doubled (relative lift +120.9%) — so this is both statistically and practically significant.
 
-**However, this result alone is not sufficient grounds for a launch decision.** A primary-metric win must be checked against guardrail metrics before recommending a full launch — see `outputs/recommendation_memo.md` for the guardrail analysis (refund rate, support ticket rate, and segment-level performance) that materially shapes the final recommendation. Notably, the average revenue per *converted* user is lower in Treatment (driven partly by a few high-value outlier customers landing in the Control group), and support ticket rates rose substantially in Treatment — both of which are addressed in the guardrail section of the memo.
+**However, this result alone is not sufficient grounds for a launch decision.** A primary-metric win must be checked against guardrail metrics before recommending a full launch  for the guardrail analysis (refund rate, support ticket rate, and segment-level performance) that materially shapes the final recommendation. Notably, the average revenue per *converted* user is lower in Treatment (driven partly by a few high-value outlier customers landing in the Control group), and support ticket rates rose substantially in Treatment — both of which are addressed in the guardrail section of the memo.
 
 ## Connection to the Business Decision
 
